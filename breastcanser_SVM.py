@@ -75,10 +75,10 @@ train_y = train['diagnosis']
 test_x = test[features_remain]
 test_y = test['diagnosis']
 
-#在训练之前对数据进行规范化，保证每个特征维度的数值均值为0，方差为1，
+#在训练之前对数据进行标准正态规范化，保证每个特征维度的数值均值为0，方差为1，
 from sklearn.preprocessing import StandardScaler
 
-ss = StandardScaler()
+ss = StandardScaler()  
 train_x = ss.fit_transform(train_x)
 test_x = ss.fit_transform(test_x)
 #SVM做训练和预测
